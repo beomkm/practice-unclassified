@@ -20,7 +20,6 @@
   )
 )
 
-
 (define (input)
   (display "성명 : ")
   (define name (read))
@@ -29,7 +28,7 @@
 
   (define person (list name age))
   (set! people (insert person people))
-  
+
   (display people)
 
   (define isContinue (askContinue))
