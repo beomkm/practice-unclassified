@@ -7,17 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="337" Width="499">
     <Grid>
-        <Button x:Name="button" Content="btn" HorizontalAlignment="Left" Margin="105,65,0,0" VerticalAlignment="Top" Width="75" Height="55" RenderTransformOrigin="0.5,0.5" Click="button_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-42.02"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <ComboBox IsEditable="true"  x:Name="comboBox" HorizontalAlignment="Left" Margin="315,130,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="299*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="button" Content="btn" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Height="55" RenderTransformOrigin="0.5,0.5" Click="button_Click"/>
+        <ComboBox IsEditable="true"  x:Name="comboBox" Margin="0,0,26,32" RenderTransformOrigin="0.5,0.5" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="120">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,15 +27,7 @@
             <ComboBoxItem Content="item2" HorizontalAlignment="Left" Width="118" Selected="ComboBoxItem_Selected"/>
             <ComboBoxItem Content="item3" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="175,120,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
-            <ListBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="154.017"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ListBox.RenderTransform>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="10,80,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
             <ListBoxItem Content="item1"/>
             <ListBoxItem Content="item2"/>
         </ListBox>
