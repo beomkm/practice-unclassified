@@ -1,1 +1,0 @@
-http://tibyte.kr/246
