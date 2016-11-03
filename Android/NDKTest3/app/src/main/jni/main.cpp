@@ -9,6 +9,7 @@ extern "C" {
 
 JNIEXPORT jstring JNICALL Java_kr_tibyte_ndktest3_MainActivity_getNativeText(JNIEnv *env, jobject obj)
 {
+    
     stack<int> st;
     string str = "abcd";
     return env->NewStringUTF(str.c_str());
