@@ -1,5 +1,5 @@
 #include <jni.h>
-#include <stack>
+#include <vector>
 #include <string>
 #include "kr_tibyte_ndktest3_MainActivity.h"
 
@@ -9,8 +9,17 @@ extern "C" {
 
 JNIEXPORT jstring JNICALL Java_kr_tibyte_ndktest3_MainActivity_getNativeText(JNIEnv *env, jobject obj)
 {
-    stack<int> st;
-    string str = "abcd";
+    string str = "";
+    vector<char> vec;
+    vec.push_back('a');
+    vec.push_back('b');
+    vec.push_back('c');
+
+    for(auto& x : vec) {
+        x ^= 32;
+        str += x;
+    }
+
     return env->NewStringUTF(str.c_str());
 
 }
