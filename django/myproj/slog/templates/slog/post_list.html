@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>
+			This is title
+		</title>
+		<script type="text/javascript">
+			var djangoPost = "{{ posts }}";
+		</script>
+		<script src="{% static 'myjs.js' %}"></script>
+	</head>
+
+	<body>
+		This is content
+		<div>
+			{% for post in posts %}
+				{{ post.time }}
+				{{ post.temp }}
+				{{ post.humi }}
+				<br>
+			{% endfor %}
+		</div>
+	</body>
+</html>
